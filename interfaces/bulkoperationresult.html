@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FrameworkModule | Sitefinity Admin App extensibility API documentation</title>
+	<title>BulkOperationResult | Sitefinity Admin App extensibility API documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,31 +54,110 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="frameworkmodule.html">FrameworkModule</a>
+					<a href="bulkoperationresult.html">BulkOperationResult</a>
 				</li>
 			</ul>
-			<h1>Class FrameworkModule</h1>
+			<h1>Interface BulkOperationResult</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The Framework module holds the Admin App specific components that can be reused
-						accross extensions.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FrameworkModule</span>
+						<span class="target">BulkOperationResult</span>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bulkoperationresult.html#faileditemsids" class="tsd-kind-icon">failed<wbr>Items<wbr>Ids</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bulkoperationresult.html#succeededitemsids" class="tsd-kind-icon">succeeded<wbr>Items<wbr>Ids</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bulkoperationresult.html#success" class="tsd-kind-icon">success</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="faileditemsids" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> failed<wbr>Items<wbr>Ids</h3>
+					<div class="tsd-signature tsd-kind-icon">failed<wbr>Items<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/commands/command.d.ts:52</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ids of the items for which the operation failed.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>type</dt>
+							<dd><p>{Array<string>}</p>
+							</dd>
+							<dt>memberof</dt>
+							<dd><p>BulkOperationResult</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="succeededitemsids" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> succeeded<wbr>Items<wbr>Ids</h3>
+					<div class="tsd-signature tsd-kind-icon">succeeded<wbr>Items<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/commands/command.d.ts:60</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ids of the items for which the operation was successfull.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>type</dt>
+							<dd><p>{Array<string>}</p>
+							</dd>
+							<dt>memberof</dt>
+							<dd><p>BulkOperationResult</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="success" class="tsd-anchor"></a>
+					<h3>success</h3>
+					<div class="tsd-signature tsd-kind-icon">success<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/commands/command.d.ts:44</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Flag that marks the execution as successful.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>type</dt>
+							<dd><p>{boolean}</p>
+							</dd>
+							<dt>memberof</dt>
+							<dd><p>BulkOperationResult</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -93,8 +172,19 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="frameworkmodule.html" class="tsd-kind-icon">Framework<wbr>Module</a>
+					<li class="current tsd-kind-interface">
+						<a href="bulkoperationresult.html" class="tsd-kind-icon">Bulk<wbr>Operation<wbr>Result</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bulkoperationresult.html#faileditemsids" class="tsd-kind-icon">failed<wbr>Items<wbr>Ids</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bulkoperationresult.html#succeededitemsids" class="tsd-kind-icon">succeeded<wbr>Items<wbr>Ids</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bulkoperationresult.html#success" class="tsd-kind-icon">success</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">

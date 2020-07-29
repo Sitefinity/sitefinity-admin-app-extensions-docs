@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FrameworkModule | Sitefinity Admin App extensibility API documentation</title>
+	<title>ListColumnsProvider | Sitefinity Admin App extensibility API documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="frameworkmodule.html">FrameworkModule</a>
+					<a href="listcolumnsprovider.html">ListColumnsProvider</a>
 				</li>
 			</ul>
-			<h1>Class FrameworkModule</h1>
+			<h1>Interface ListColumnsProvider</h1>
 		</div>
 	</div>
 </header>
@@ -67,18 +67,115 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The Framework module holds the Admin App specific components that can be reused
-						accross extensions.</p>
+						<p>A columns provider to provide columns for the list view of the content screen.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>export</dt>
+						<dd></dd>
+						<dt>interface</dt>
+						<dd><p>ListColumnsProvider</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FrameworkModule</span>
+						<span class="target">ListColumnsProvider</span>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="listcolumnsprovider.html#getcolumns" class="tsd-kind-icon">get<wbr>Columns</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="listcolumnsprovider.html#getcolumnstoremove" class="tsd-kind-icon">get<wbr>Columns<wbr>ToRemove</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getcolumns" class="tsd-anchor"></a>
+					<h3>get<wbr>Columns</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Columns<span class="tsd-signature-symbol">(</span>entityData<span class="tsd-signature-symbol">: </span><a href="entitydata.html" class="tsd-signature-type">EntityData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="columnmodel.html" class="tsd-signature-type">ColumnModel</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/index-component/columns-provider.d.ts:41</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets an observable collection of columns.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ListColumnsProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entityData: <a href="entitydata.html" class="tsd-signature-type">EntityData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Metadata for the content type of current list view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="columnmodel.html" class="tsd-signature-type">ColumnModel</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable collection of columns that will be added to the list view.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getcolumnstoremove" class="tsd-anchor"></a>
+					<h3>get<wbr>Columns<wbr>ToRemove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Columns<wbr>ToRemove<span class="tsd-signature-symbol">(</span>entityData<span class="tsd-signature-symbol">: </span><a href="entitydata.html" class="tsd-signature-type">EntityData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/index-component/columns-provider.d.ts:50</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets an obaservable collection of columns to be removed.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ListColumnsProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entityData: <a href="entitydata.html" class="tsd-signature-type">EntityData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Metadata for the content type of current list view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable collection of columns that will be removed from the list view.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -93,8 +190,16 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="frameworkmodule.html" class="tsd-kind-icon">Framework<wbr>Module</a>
+					<li class="current tsd-kind-interface">
+						<a href="listcolumnsprovider.html" class="tsd-kind-icon">List<wbr>Columns<wbr>Provider</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="listcolumnsprovider.html#getcolumns" class="tsd-kind-icon">get<wbr>Columns</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="listcolumnsprovider.html#getcolumnstoremove" class="tsd-kind-icon">get<wbr>Columns<wbr>ToRemove</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">

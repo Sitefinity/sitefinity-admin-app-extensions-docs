@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FrameworkModule | Sitefinity Admin App extensibility API documentation</title>
+	<title>CommandsFilter | Sitefinity Admin App extensibility API documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="frameworkmodule.html">FrameworkModule</a>
+					<a href="commandsfilter.html">CommandsFilter</a>
 				</li>
 			</ul>
-			<h1>Class FrameworkModule</h1>
+			<h1>Interface CommandsFilter</h1>
 		</div>
 	</div>
 </header>
@@ -67,18 +67,83 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The Framework module holds the Admin App specific components that can be reused
-						accross extensions.</p>
+						<p>Provider logic for filtering operations based on some criteria.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>export</dt>
+						<dd></dd>
+						<dt>interface</dt>
+						<dd><p>CommandsFilter</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FrameworkModule</span>
+						<span class="target">CommandsFilter</span>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="commandsfilter.html#filter" class="tsd-kind-icon">filter</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="filter" class="tsd-anchor"></a>
+					<h3>filter</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">(</span>operations<span class="tsd-signature-symbol">: </span><a href="commandmodel.html" class="tsd-signature-type">CommandModel</a><span class="tsd-signature-symbol">[]</span>, data<span class="tsd-signature-symbol">: </span><a href="commandsdata.html" class="tsd-signature-type">CommandsData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="commandmodel.html" class="tsd-signature-type">CommandModel</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/commands/commands-filter.d.ts:22</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Filters given operations.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>CommandsFilter</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>operations: <a href="commandmodel.html" class="tsd-signature-type">CommandModel</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The operations that will be filtered,</p>
+									</div>
+								</li>
+								<li>
+									<h5>data: <a href="commandsdata.html" class="tsd-signature-type">CommandsData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The context for the operations.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="commandmodel.html" class="tsd-signature-type">CommandModel</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>Filtered operations.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -93,8 +158,13 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="frameworkmodule.html" class="tsd-kind-icon">Framework<wbr>Module</a>
+					<li class="current tsd-kind-interface">
+						<a href="commandsfilter.html" class="tsd-kind-icon">Commands<wbr>Filter</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="commandsfilter.html#filter" class="tsd-kind-icon">filter</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
