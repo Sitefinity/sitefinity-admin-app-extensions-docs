@@ -64,6 +64,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides item lifecycle hooks</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -79,6 +86,12 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#onedititemchanged" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Changed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#onedititeminitializing" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Initializing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#onedititemunloading" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Unloading</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#ongriditemschanged" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Changed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#ongriditemsinitializing" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Initializing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#ongriditemsunloading" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Unloading</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemhooksprovider.html#onitemloaded" class="tsd-kind-icon">on<wbr>Item<wbr>Loaded</a></li>
 							</ul>
 						</section>
@@ -88,22 +101,253 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="onitemloaded" class="tsd-anchor"></a>
-					<h3>on<wbr>Item<wbr>Loaded</h3>
+					<a name="onedititemchanged" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Edit<wbr>Item<wbr>Changed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Loaded<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="dataitem.html" class="tsd-signature-type">DataItem</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Changed<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in v1/item/item-hooks-provider.d.ts:15</li>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:43</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the create/edit form is being changed.
+									Most commonly fired when some operation is executed such as Publish, Save as Draft etc.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <a href="dataitem.html" class="tsd-signature-type">DataItem</a></h5>
+									<h5>data: <a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item that is being edited or &#39;null&#39; if the item is in create.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onedititeminitializing" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Edit<wbr>Item<wbr>Initializing</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Initializing<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:25</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p> Fires when the create/edit form is being initializing.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item that was edited or &#39;null&#39; if the item was in create.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onedititemunloading" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Edit<wbr>Item<wbr>Unloading</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Unloading<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:34</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the create/edit form is being unloading/destroying.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="editlifecyclehookparam.html" class="tsd-signature-type">EditLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item that is being edited or &#39;null&#39; if the item is in create.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ongriditemschanged" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Grid<wbr>Items<wbr>Changed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Changed<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:70</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the list/thumbs/timeline view items are being changed.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new items that will be rendered in the view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ongriditemsinitializing" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Grid<wbr>Items<wbr>Initializing</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Initializing<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:52</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the list/thumbs/timeline view is being initializing.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The items that will be rendered in the view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ongriditemsunloading" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Grid<wbr>Items<wbr>Unloading</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Unloading<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:61</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the list/thumbs/timeline view is being unloading/destroying.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ItemHooksProvider</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="listlifecyclehookparam.html" class="tsd-signature-type">ListLifecycleHookParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The items that were rendered in the view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Observable result that marks when the hook is completed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onitemloaded" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Item<wbr>Loaded</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Loaded<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataItem</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/item/item-hooks-provider.d.ts:16</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fires when the item is loaded in the edit screen.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">DataItem</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item that is loaded.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -127,6 +371,24 @@
 					<li class="current tsd-kind-interface">
 						<a href="itemhooksprovider.html" class="tsd-kind-icon">Item<wbr>Hooks<wbr>Provider</a>
 						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#onedititemchanged" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Changed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#onedititeminitializing" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Initializing</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#onedititemunloading" class="tsd-kind-icon">on<wbr>Edit<wbr>Item<wbr>Unloading</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#ongriditemschanged" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Changed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#ongriditemsinitializing" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Initializing</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itemhooksprovider.html#ongriditemsunloading" class="tsd-kind-icon">on<wbr>Grid<wbr>Items<wbr>Unloading</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="itemhooksprovider.html#onitemloaded" class="tsd-kind-icon">on<wbr>Item<wbr>Loaded</a>
 							</li>

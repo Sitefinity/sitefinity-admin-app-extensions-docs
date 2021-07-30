@@ -64,6 +64,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Represents a command that can be executed on a DataItem</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -97,9 +104,19 @@
 					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in v1/commands/command-model.d.ts:15</li>
+							<li>Defined in v1/commands/command-model.d.ts:21</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The category is used to group commands and to determine their placement in the UI.</p>
+						</div>
+						<p>In dialogs the category is used to determine the visual representation of the command.
+							There are 3 out of the box categories:
+							&#39;cancel&#39; - the rendered button is white
+							&#39;primary&#39; - the rendered button is green
+						&#39;delete&#39; - the rendered button is red</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -107,9 +124,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in v1/commands/command-model.d.ts:20</li>
+							<li>Defined in v1/commands/command-model.d.ts:26</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the command is used as identifier.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ordinal" class="tsd-anchor"></a>
@@ -117,9 +139,14 @@
 					<div class="tsd-signature tsd-kind-icon">ordinal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in v1/commands/command-model.d.ts:25</li>
+							<li>Defined in v1/commands/command-model.d.ts:31</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ordinal number of the command</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="title" class="tsd-anchor"></a>
@@ -130,16 +157,26 @@
 							<li>Defined in v1/commands/command-model.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The title of the command is visualized as text inside the button in the UI.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="token" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> token</h3>
-					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <a href="tokendata.html" class="tsd-signature-type">TokenData</a></div>
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TokenData</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in v1/commands/command-model.d.ts:30</li>
+							<li>Defined in v1/commands/command-model.d.ts:36</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A custom token for invoking a service to handle the command</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>

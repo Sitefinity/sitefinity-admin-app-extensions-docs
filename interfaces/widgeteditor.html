@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FieldChangeService | Sitefinity Admin App extensibility API documentation</title>
+	<title>WidgetEditor | Sitefinity Admin App extensibility API documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="fieldchangeservice.html">FieldChangeService</a>
+					<a href="widgeteditor.html">WidgetEditor</a>
 				</li>
 			</ul>
-			<h1>Interface FieldChangeService</h1>
+			<h1>Interface WidgetEditor</h1>
 		</div>
 	</div>
 </header>
@@ -67,22 +67,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Service that processes field changes.</p>
+						<p>Interface for widget editor views.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>export</dt>
-						<dd></dd>
-						<dt>interface</dt>
-						<dd><p>FieldChangeService</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FieldChangeService</span>
+						<span class="target">WidgetEditor</span>
 					</li>
 				</ul>
 			</section>
@@ -93,8 +86,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="fieldchangeservice.html#canprocess" class="tsd-kind-icon">can<wbr>Process</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="fieldchangeservice.html#processchange" class="tsd-kind-icon">process<wbr>Change</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="widgeteditor.html#actionexecuting" class="tsd-kind-icon">action<wbr>Executing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="widgeteditor.html#getmodifiedproperties" class="tsd-kind-icon">get<wbr>Modified<wbr>Properties</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="widgeteditor.html#initialize" class="tsd-kind-icon">initialize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="widgeteditor.html#setvalues" class="tsd-kind-icon">set<wbr>Values</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="widgeteditor.html#validate" class="tsd-kind-icon">validate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,87 +99,164 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="canprocess" class="tsd-anchor"></a>
-					<h3>can<wbr>Process</h3>
+					<a name="actionexecuting" class="tsd-anchor"></a>
+					<h3>action<wbr>Executing</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>Process<span class="tsd-signature-symbol">(</span>typeFullName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">action<wbr>Executing<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="actioncontext.html" class="tsd-signature-type">ActionContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in v1/fields-behaviour/fields-change.service.d.ts:28</li>
+									<li>Defined in v1/widget-editor/widget-editor.d.ts:38</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Determines if this service can process the changed field.</p>
+									<p>Invoke when action for saving or canceling is initiated and the input should be preprocessed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>FieldsChangeService</p>
+									<dd><p>{WidgetEditor}</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>typeFullName: <span class="tsd-signature-type">string</span></h5>
+									<h5>context: <a href="actioncontext.html" class="tsd-signature-type">ActionContext</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The CLR full name of the item(ex: Telerik.Sitefinity.News.Model.NewsItem)</p>
+										<p>defines if the action should save the data or the new input will be discarded.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Wheter the field can be processed.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="processchange" class="tsd-anchor"></a>
-					<h3>process<wbr>Change</h3>
+					<a name="getmodifiedproperties" class="tsd-anchor"></a>
+					<h3>get<wbr>Modified<wbr>Properties</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">process<wbr>Change<span class="tsd-signature-symbol">(</span>changedFieldName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, changedValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, fields<span class="tsd-signature-symbol">: </span><a href="fieldwrapper.html" class="tsd-signature-type">FieldWrapper</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Modified<wbr>Properties<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="propertydata.html" class="tsd-signature-type">PropertyData</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in v1/fields-behaviour/fields-change.service.d.ts:19</li>
+									<li>Defined in v1/widget-editor/widget-editor.d.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Method called when on of the field changes.</p>
+									<p>Retrieves the modified properties</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>FieldsChangeService</p>
+									<dd><p>{WidgetEditor}</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="propertydata.html" class="tsd-signature-type">PropertyData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="initialize" class="tsd-anchor"></a>
+					<h3>initialize</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span>widgetMetadata<span class="tsd-signature-symbol">: </span><a href="widgetmetadata.html" class="tsd-signature-type">WidgetMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/widget-editor/widget-editor.d.ts:15</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialze the view. Invoked when properties for the widget are resolved.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>{WidgetEditor}</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>changedFieldName: <span class="tsd-signature-type">string</span></h5>
+									<h5>widgetMetadata: <a href="widgetmetadata.html" class="tsd-signature-type">WidgetMetadata</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The name of the field that was changed.</p>
+										<p>The metadata of the widget.</p>
 									</div>
 								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setvalues" class="tsd-anchor"></a>
+					<h3>set<wbr>Values</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Values<span class="tsd-signature-symbol">(</span>propValues<span class="tsd-signature-symbol">: </span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/widget-editor/widget-editor.d.ts:22</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets property values.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>{WidgetEditor}</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
 								<li>
-									<h5>changedValue: <span class="tsd-signature-type">any</span></h5>
+									<h5>propValues: <a href="dictionary.html" class="tsd-signature-type">Dictionary</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The new value of the field.</p>
-									</div>
-								</li>
-								<li>
-									<h5>fields: <a href="fieldwrapper.html" class="tsd-signature-type">FieldWrapper</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>All fields in the form.</p>
+										<p>The values of the widget`s properties.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="validate" class="tsd-anchor"></a>
+					<h3>validate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="validationresult.html" class="tsd-signature-type">ValidationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in v1/widget-editor/widget-editor.d.ts:29</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Validates the property data and returns the validation result.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>{WidgetEditor}</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="validationresult.html" class="tsd-signature-type">ValidationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -202,13 +275,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="fieldchangeservice.html" class="tsd-kind-icon">Field<wbr>Change<wbr>Service</a>
+						<a href="widgeteditor.html" class="tsd-kind-icon">Widget<wbr>Editor</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="fieldchangeservice.html#canprocess" class="tsd-kind-icon">can<wbr>Process</a>
+								<a href="widgeteditor.html#actionexecuting" class="tsd-kind-icon">action<wbr>Executing</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="fieldchangeservice.html#processchange" class="tsd-kind-icon">process<wbr>Change</a>
+								<a href="widgeteditor.html#getmodifiedproperties" class="tsd-kind-icon">get<wbr>Modified<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="widgeteditor.html#initialize" class="tsd-kind-icon">initialize</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="widgeteditor.html#setvalues" class="tsd-kind-icon">set<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="widgeteditor.html#validate" class="tsd-kind-icon">validate</a>
 							</li>
 						</ul>
 					</li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FrameworkModule | Sitefinity Admin App extensibility API documentation</title>
+	<title>WidgetMetadata | Sitefinity Admin App extensibility API documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="frameworkmodule.html">FrameworkModule</a>
+					<a href="widgetmetadata.html">WidgetMetadata</a>
 				</li>
 			</ul>
-			<h1>Class FrameworkModule</h1>
+			<h1>Interface WidgetMetadata</h1>
 		</div>
 	</div>
 </header>
@@ -67,8 +67,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The Framework module holds the Admin App specific components that can be reused
-						accross extensions.</p>
+						<p>Interface for the widget properties information.</p>
 					</div>
 				</div>
 			</section>
@@ -76,9 +75,129 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FrameworkModule</span>
+						<span class="target">WidgetMetadata</span>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="widgetmetadata.html#caption" class="tsd-kind-icon">caption</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="widgetmetadata.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="widgetmetadata.html#propertymetadata" class="tsd-kind-icon">property<wbr>Metadata</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="widgetmetadata.html#propertymetadataflat" class="tsd-kind-icon">property<wbr>Metadata<wbr>Flat</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="widgetmetadata.html#propertyvalues" class="tsd-kind-icon">property<wbr>Values</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="caption" class="tsd-anchor"></a>
+					<h3>caption</h3>
+					<div class="tsd-signature tsd-kind-icon">caption<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/widget-editor/widget-editor.d.ts:85</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The widget caption.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>{WidgetMetadata}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/widget-editor/widget-editor.d.ts:78</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The widget name.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>{WidgetMetadata}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="propertymetadata" class="tsd-anchor"></a>
+					<h3>property<wbr>Metadata</h3>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Metadata<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="sectiondata.html" class="tsd-signature-type">SectionData</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/widget-editor/widget-editor.d.ts:64</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Collection of properties and sections metadata.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>{WidgetMetadata}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="propertymetadataflat" class="tsd-anchor"></a>
+					<h3>property<wbr>Metadata<wbr>Flat</h3>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Metadata<wbr>Flat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="propertymetadata.html" class="tsd-signature-type">PropertyMetadata</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/widget-editor/widget-editor.d.ts:71</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Collection of properties metadata in a flat structure.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>{WidgetMetadata}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="propertyvalues" class="tsd-anchor"></a>
+					<h3>property<wbr>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Values<span class="tsd-signature-symbol">:</span> <a href="dictionary.html" class="tsd-signature-type">Dictionary</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in v1/widget-editor/widget-editor.d.ts:57</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Collection of property names and values.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>{WidgetMetadata}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -93,8 +212,25 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="frameworkmodule.html" class="tsd-kind-icon">Framework<wbr>Module</a>
+					<li class="current tsd-kind-interface">
+						<a href="widgetmetadata.html" class="tsd-kind-icon">Widget<wbr>Metadata</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="widgetmetadata.html#caption" class="tsd-kind-icon">caption</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="widgetmetadata.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="widgetmetadata.html#propertymetadata" class="tsd-kind-icon">property<wbr>Metadata</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="widgetmetadata.html#propertymetadataflat" class="tsd-kind-icon">property<wbr>Metadata<wbr>Flat</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="widgetmetadata.html#propertyvalues" class="tsd-kind-icon">property<wbr>Values</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
